@@ -6,7 +6,6 @@ const jwt = require('jsonwebtoken')
 
 const signUp = async (req, res) => {
 	console.log('heyo from user signup')
-	console.log(req.body)
 
 	try {
 		const salt = bcrypt.genSaltSync(saltRounds)
@@ -27,6 +26,7 @@ const signUp = async (req, res) => {
 
 const signIn = async (req, res) => {
 	console.log('hello from signIn')
+	console.log(req.body)
 	try {
 		let user = await User.findOne({
 			username: req.body.username,
