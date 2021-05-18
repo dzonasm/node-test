@@ -50,6 +50,10 @@ const updateTodo = async (req, res) => {
 	}
 }
 
+const deleteTodos = () => {
+	console.log('viskas bus gerai')
+}
+
 module.exports = {
 	createTodo,
 	getUserTodos,
